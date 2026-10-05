@@ -1,0 +1,45 @@
+//
+// Copyright (C) 2021 The LineageOS Project
+// Copyright (C) 2021-2024 crDroid Android Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app_import {
+    name: "OnePlusCamera",
+    owner: "oneplus",
+    apk: "OnePlusCamera.apk",
+    presigned: true,
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    overrides: [
+        "Snap",
+        "Camera2",
+    ],
+}
+
+android_app_import {
+    name: "OnePlusCameraService",
+    owner: "oneplus",
+    apk: "OnePlusCameraService.apk",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
+    name: "OnePlusGallery",
+    owner: "oneplus",
+    apk: "OnePlusGallery.apk",
+    presigned: true,
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
